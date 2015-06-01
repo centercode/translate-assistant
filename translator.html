@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./src/translator.css" />
+</head>
+
+<body class="day">
+  <div class="container">
+    <div class="main" id="main">
+      <div id="source_text" class="day">
+      </div>
+      <textarea id="dest_text" class="day" cols="30" rows="10"></textarea>
+    </div>
+    <div class="btns_left">
+      <div class="browse">
+        <input type='button' class=' btn_browse' value='浏览' />
+        <input type="file" id="file" class=" file" name="file[]" onchange="handleFileSelect(event)" />
+      </div>
+      <input type="button" class=" btn_theme" value="◑ 主题" onclick="changeTheme()">
+      <input type="button" id="savetext" class="btn_save" value="保存" onclick="doSave()">
+      <input type="button" class="btn_clipboard" value="拷贝" onclick="copyToClipboard()" />
+    </div>
+    <div class="btns_right">
+      <input class=" btn_up" id="up" value="↑" type="button" onclick="moveSelect('up')">
+      <input class=" btn_down" id="down" value="↓" type="button" onclick="moveSelect('down')">
+    </div>
+  </div>
+  <script src="./src/translator.js">
+  </script>
+
+</body>
+
+</html>

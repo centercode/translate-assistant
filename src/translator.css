@@ -1,0 +1,146 @@
+div,
+span,
+input {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+body.day {
+  background-color: #e6eaed;
+}
+
+body.night {
+  background-color: dimgray;
+  /*    ;*/
+}
+
+div.main {
+  margin: 0 auto;
+  height: auto;
+  width: 600px;
+}
+
+div.day {
+  padding: 0 5px;
+  overflow: auto;
+  width: 590px;
+  height: 240px;
+  background-color: rgb(250, 250, 215);
+}
+
+div.night {
+  overflow: auto;
+  width: 600px;
+  height: 250px;
+  /*  color: rgb(173, 229, 249);*/
+}
+
+span {
+  display: inline-block;
+  font-family: Menlo, Consolas, Helvetica, Arial;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+div.day span.highlight,
+div.day span:hover {
+  background-color: lightblue;
+}
+
+div.night span.highlight,
+div.night span:hover {
+  background-color: rgb(173, 229, 249);
+}
+
+div.browse {
+  width: 85px;
+  height: 38px;
+}
+
+div.btns_left {
+  top: 80px;
+  position: absolute;
+  margin-left: 265px;
+}
+
+div input {
+  color: white;
+  width: 85px;
+  height: 38px;
+  border-style: none;
+  border-width: 0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+div input.night {
+  color: #253237;
+}
+
+input.btn_browse {
+  background-color: #005FCC;
+  /*    #286090;*/
+}
+
+input.file {
+  top: -38px;
+  position: relative;
+  opacity: 0;
+  background-color: pink;
+}
+
+input.btn_theme {
+  margin-top: 30;
+  display: block;
+  background-color: #41A7C5;
+  /*  #55acee;*/
+}
+
+input.btn_save {
+  display: block;
+  margin-top: 30px;
+  background-color: yellowgreen;
+}
+
+input.btn_clipboard {
+  margin-top: 30px;
+  background-color: #F9A123;
+}
+
+div.btns_right {
+  position: absolute;
+  top: 208px;
+  margin-left: 1000px;
+  display: block;
+}
+
+input.btn_up,
+input.btn_down {
+  margin-top: 15px;
+  height: 40px;
+  width: 40px;
+  display: block;
+  font-size: 24px;
+  background-color: rgb(68, 157, 68);
+}
+
+textarea.day {
+  font-size: 18px;
+  margin-top: 20;
+  padding: 15px 5px;
+  width: 600px;
+  border-width: 0;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+}
+
+textarea.night {
+  font-size: 18px;
+  margin-top: 20;
+  padding: 15px 5px;
+  width: 600px;
+  border-radius: 5px;
+  color: rgb(238, 238, 238);
+  background-color: dimgray;
+}

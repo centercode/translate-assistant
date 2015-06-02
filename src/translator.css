@@ -28,20 +28,20 @@ body.night {
 div.main {
   margin: 0 auto;
   height: auto;
-  width: 800px;
+  width: 760px;
 }
 
 div.day {
   padding: 0 5px;
   overflow: auto;
-  width: 790px;
+  width: 750px;
   height: 240px;
   background-color: rgb(250, 250, 215);
 }
 
 div.night {
   overflow: auto;
-  width: 800px;
+  width: 760px;
   height: 250px;
   /*  color: rgb(173, 229, 249);*/
 }
@@ -71,7 +71,7 @@ div.browse {
 div.btns_left {
   top: 80px;
   position: absolute;
-  margin-left: 170px;
+  margin-left: 165px;
 }
 
 div input {
@@ -139,7 +139,7 @@ textarea.day {
   font-size: 18px;
   margin-top: 20;
   padding: 15px 5px;
-  width: 800px;
+  width: 760px;
   border-width: 0;
   border-radius: 5px;
   background-color: rgb(245, 245, 245);
@@ -149,7 +149,7 @@ textarea.night {
   font-size: 18px;
   margin-top: 20;
   padding: 15px 5px;
-  width: 800px;
+  width: 760px;
   border-radius: 5px;
   color: rgb(238, 238, 238);
   background-color: dimgray;

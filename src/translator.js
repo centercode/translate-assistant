@@ -10,17 +10,13 @@ window.onbeforeunload = function () {
   return "亲，记得保存了吗？";
 };
 
-//function hotkey(event) {
-//  if (event.altKey && event.keyCode == 85) {
-//    moveSelect('up');
-//    console.log("up");
-//  } else if (event.altKey && event.keyCode == 78) {
-//    moveSelect('down');
-//    console.log("down");
-//  }
-//}
-
-//console.log("(a b.)a".match(/[a\(a b\)]/));
+function hotkey(event) {
+  if (event.altKey && event.keyCode == 38) { //up
+    moveSelect('up');
+  } else if (event.altKey && event.keyCode == 40) { //down
+    moveSelect('down');
+  }
+}
 
 function highLight(obj) {
   "use strict";
@@ -94,13 +90,20 @@ function moveSelect(str) {
   }
   if (str === "down") {
     next = globalVar.cur_high.nextSibling;
+    if (next != null && next.tagName == "BR") {
+      next = next.nextSibling;
+    }
   } else { //str == "up"
     if (document.getElementById("source_text").firstChild === globalVar.cur_high) {
       next = null;
     } else {
       next = globalVar.cur_high.previousSibling;
+      if (next != null && next.tagName == "BR") {
+        next = next.previousSibling;
+      }
     }
   }
+
   if (next !== null) {
     highLight(next);
   }

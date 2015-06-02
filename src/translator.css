@@ -28,28 +28,28 @@ body.night {
 div.main {
   margin: 0 auto;
   height: auto;
-  width: 600px;
+  width: 800px;
 }
 
 div.day {
   padding: 0 5px;
   overflow: auto;
-  width: 590px;
+  width: 790px;
   height: 240px;
   background-color: rgb(250, 250, 215);
 }
 
 div.night {
   overflow: auto;
-  width: 600px;
+  width: 800px;
   height: 250px;
   /*  color: rgb(173, 229, 249);*/
 }
 
 span {
   display: inline-block;
-  font-family: Menlo, Consolas, Helvetica, Arial;
-  font-size: 22px;
+  font-family: Consolas, Arial;
+  font-size: 18px;
   cursor: pointer;
 }
 
@@ -71,7 +71,7 @@ div.browse {
 div.btns_left {
   top: 80px;
   position: absolute;
-  margin-left: 265px;
+  margin-left: 170px;
 }
 
 div input {
@@ -119,9 +119,9 @@ input.btn_clipboard {
 }
 
 div.btns_right {
-  position: absolute;
+  position: fixed;
   top: 208px;
-  margin-left: 1000px;
+  margin-left: 1100px;
   display: block;
 }
 
@@ -139,7 +139,7 @@ textarea.day {
   font-size: 18px;
   margin-top: 20;
   padding: 15px 5px;
-  width: 600px;
+  width: 800px;
   border-width: 0;
   border-radius: 5px;
   background-color: rgb(245, 245, 245);
@@ -149,7 +149,7 @@ textarea.night {
   font-size: 18px;
   margin-top: 20;
   padding: 15px 5px;
-  width: 600px;
+  width: 800px;
   border-radius: 5px;
   color: rgb(238, 238, 238);
   background-color: dimgray;

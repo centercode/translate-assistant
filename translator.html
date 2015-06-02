@@ -6,6 +6,7 @@
 </head>
 
 <body class="day">
+  <!--  onkeydown="hotkey(event)"-->
   <div class="container">
     <div class="main" id="main">
       <div id="source_text" class="day">
@@ -22,8 +23,8 @@
       <input type="button" class="btn_clipboard" value="拷贝" onclick="copyToClipboard()" />
     </div>
     <div class="btns_right">
-      <input class=" btn_up" id="up" value="↑" type="button" onclick="moveSelect('up')">
-      <input class=" btn_down" id="down" value="↓" type="button" onclick="moveSelect('down')">
+      <input class=" btn_up" id="up" value="↑" type="button" accesskey="u" onclick="moveSelect('up')">
+      <input class=" btn_down" id="down" value="↓" type="button" accesskey="n" onclick="moveSelect('down')">
     </div>
   </div>
   <script src="./src/translator.js">

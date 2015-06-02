@@ -6,6 +6,16 @@ input {
   border-width: 0;
 }
 
+::-moz-selection {
+  color: #fff;
+  background-color: #639;
+}
+
+::selection {
+  color: #fff;
+  background-color: #639;
+}
+
 body.day {
   background-color: #e6eaed;
 }

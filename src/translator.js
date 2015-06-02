@@ -10,6 +10,16 @@ window.onbeforeunload = function () {
   return "亲，记得保存了吗？";
 };
 
+//function hotkey(event) {
+//  if (event.altKey && event.keyCode == 85) {
+//    moveSelect('up');
+//    console.log("up");
+//  } else if (event.altKey && event.keyCode == 78) {
+//    moveSelect('down');
+//    console.log("down");
+//  }
+//}
+
 function highLight(obj) {
   "use strict";
   var i;
@@ -42,7 +52,7 @@ function handleFileSelect(event) { //loading file
   reader.onload = function () {
     removeAllChilds(source_div);
     read_result = reader.result;
-    globalVar.str = read_result.split('.');
+    globalVar.str = read_result.split(/[\.\!\?]/);
     spanNodes = new Array(globalVar.str.length);
     for (i = 0, j = 0; j < spanNodes.length; j++) {
       if (globalVar.str[i] === "\n" || globalVar.str[i] === "") {

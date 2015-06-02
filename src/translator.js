@@ -20,6 +20,8 @@ window.onbeforeunload = function () {
 //  }
 //}
 
+//console.log("(a b.)a".match(/[a\(a b\)]/));
+
 function highLight(obj) {
   "use strict";
   var i;
@@ -38,6 +40,14 @@ function removeAllChilds(div) {
   }
 }
 
+function splitStr(str) {
+  "use strict";
+  var b;
+  str = str.replace(/([^\.\!\?\n])\n/g, '$1 ');
+  b = str.match(/[^\.\!\?\n]+[\.\!\?\n]|\n/g);
+  return b;
+}
+
 function handleFileSelect(event) { //loading file
   "use strict";
   var i,
@@ -52,14 +62,15 @@ function handleFileSelect(event) { //loading file
   reader.onload = function () {
     removeAllChilds(source_div);
     read_result = reader.result;
-    globalVar.str = read_result.split(/[\.\!\?]/);
+    globalVar.str = splitStr(read_result);
     spanNodes = new Array(globalVar.str.length);
     for (i = 0, j = 0; j < spanNodes.length; j++) {
-      if (globalVar.str[i] === "\n" || globalVar.str[i] === "") {
-        continue;
+      if (globalVar.str[i] == "\n") {
+        spanNodes[i] = document.createElement("br");
+      } else {
+        spanNodes[i] = document.createElement("span");
+        spanNodes[i].innerHTML = globalVar.str[i];
       }
-      spanNodes[i] = document.createElement("span");
-      spanNodes[i].innerHTML = globalVar.str[i] + ".";
       source_div.appendChild(spanNodes[i]);
       spanNodes[i].addEventListener('click', function () {
         highLight(this);
@@ -165,6 +176,7 @@ function doSave() {
 }
 
 function copyToClipboard() {
+  "use strict";
   var d = document.all("dest_text").value;
   window.clipboardData.setData('text', d);
 }

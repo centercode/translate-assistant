@@ -7,10 +7,11 @@
 <body>
   <script>
     function split() {
-      var a = "a, b, c. d, e? f,g!",
+      var a = "a, b, c.a\n\nb d, e?\n f,g!\n",
         b = [];
-      b[0] = a;
-      console.log(b);
+      a = a.replace(/([^\.\!\?\n])\nb/m, '#$1#');
+      console.log(a);
+      document.write(a);
     }
     split();
   </script>

@@ -48,6 +48,7 @@ function handleFileSelect(event) { //loading file
   "use strict";
   var i,
     j,
+    len,
     spanNodes = [],
     reader = new FileReader(),
     files = event.target.files,
@@ -60,7 +61,7 @@ function handleFileSelect(event) { //loading file
     read_result = reader.result;
     globalVar.str = splitStr(read_result);
     spanNodes = new Array(globalVar.str.length);
-    for (i = 0, j = 0; j < spanNodes.length; j++) {
+    for (i = 0, j = 0, len = spanNodes.length; j < len; j++) {
       if (globalVar.str[i] == "\n") {
         spanNodes[i] = document.createElement("br");
       } else {
@@ -113,6 +114,7 @@ function moveSelect(str) {
 function changeTheme() {
   "use strict";
   var i,
+    len_btns,
     body = document.getElementsByTagName('body')[0],
     source_div = document.getElementById('source_text'),
     textarea = document.getElementById('dest_text'),
@@ -120,12 +122,13 @@ function changeTheme() {
     btns = document.getElementsByTagName("input");
 
   globalVar.click_time += 1;
+  len_btns = btns.length;
   if (globalVar.click_time % 2 === 1) {
     //night mode
     body.className = "night";
     source_div.className = "night";
     textarea.className = "night";
-    for (i = 0; i < btns.length; i++) {
+    for (i = 0; i < len_btns; i++) {
       btns[i].className += " night";
     }
 
@@ -133,7 +136,7 @@ function changeTheme() {
     body.className = "day";
     source_div.className = "day";
     textarea.className = "day";
-    for (i = 0; i < btns.length; i++) {
+    for (i = 0; i < len_btns; i++) {
       btns[i].className = btns[i].className.slice(0, -6);
     }
   }

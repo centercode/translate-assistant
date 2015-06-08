@@ -140,7 +140,7 @@ input.btn_down {
 textarea.day {
   font-size: 17px;
   margin-top: 20;
-  padding: 15px 5px;
+  padding: 5px 5px;
   width: 740px;
   border-width: 0;
   border-radius: 5px;
@@ -156,7 +156,7 @@ textarea.day {
 textarea.night {
   font-size: 17px;
   margin-top: 20;
-  padding: 15px 5px;
+  padding: 5px 5px;
   width: 740px;
   border-radius: 5px;
   color: rgb(238, 238, 238);

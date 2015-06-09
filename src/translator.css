@@ -49,7 +49,8 @@ div.night {
 }
 
 span {
-  display: inline-block;
+  /*  display: inline-block;*/
+  
   font-family: Consolas, Arial;
   font-size: 18px;
   cursor: pointer;

@@ -39,8 +39,8 @@ function removeAllChilds(div) {
 function splitStr(str) {
   "use strict";
   var b;
-  str = str.replace(/([^\.\!\?\n])\n/g, '$1 ');
-  b = str.match(/[^\.\!\?\n]+[\.\!\?\n]|\n/g);
+  //  str = str.replace(/([^\.\!\?\n])\n/g, '$1 ');
+  b = str.match(/[^\.\!\?\n]+[\.\!\?\n](\n)?/g);
   return b;
 }
 
@@ -49,6 +49,7 @@ function handleFileSelect(event) { //loading file
   var i,
     j,
     len,
+    brNode,
     spanNodes = [],
     reader = new FileReader(),
     files = event.target.files,
@@ -60,20 +61,21 @@ function handleFileSelect(event) { //loading file
     removeAllChilds(source_div);
     read_result = reader.result;
     globalVar.str = splitStr(read_result);
+    console.log(globalVar.str);
     spanNodes = new Array(globalVar.str.length);
     for (i = 0, j = 0, len = spanNodes.length; j < len; j++) {
-      if (globalVar.str[i] == "\n") {
-        spanNodes[i] = document.createElement("br");
-      } else {
-        spanNodes[i] = document.createElement("span");
-        spanNodes[i].innerHTML = globalVar.str[i];
-      }
+      spanNodes[i] = document.createElement("span");
+      spanNodes[i].innerHTML = globalVar.str[i];
       source_div.appendChild(spanNodes[i]);
       spanNodes[i].addEventListener('click', function () {
         highLight(this);
       }, false);
       if (i === 0) {
         highLight(spanNodes[i]);
+      }
+      if (globalVar.str[i].slice(-1) == "\n") {
+        brNode = document.createElement("br");
+        source_div.appendChild(brNode);
       }
       i += 1;
     }

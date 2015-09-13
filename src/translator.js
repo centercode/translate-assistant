@@ -79,7 +79,9 @@ function handleFileSelect(event) { //loading file
       }
       i += 1;
     }
-
+    console.log(files[0]);
+    //$(document).attr("title", files[0].name + "-Translator");
+    document.title = files[0].name + "-Translator";
   };
 }
 

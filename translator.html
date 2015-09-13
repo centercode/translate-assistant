@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="./src/translator.css" />
+  <script src="./src/jquery-2.1.3.min.js"></script>
 </head>
 
 <body class="day" onkeydown="hotkey(event)">
@@ -17,6 +18,10 @@
       <div class="browse">
         <input type='button' class=' btn_browse' value='文件' />
         <input type="file" id="file" class=" file" name="file[]" onchange="handleFileSelect(event)" />
+      </div>
+      <div class="btn_font">
+        <input type="button" class="btn_font_plus" value="+" onclick="chFont(1)">
+        <input type="button" class="btn_font_sub" value="--" onclick="chFont(-1)">
       </div>
       <input type="button" class=" btn_theme" value="◑ 主题" onclick="changeTheme()">
       <input type="button" id="savetext" class="btn_save" value="保存" onclick="doSave()">

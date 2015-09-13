@@ -113,6 +113,15 @@ function moveSelect(str) {
 
 }
 
+function chFont(dx) {
+  "use strict";
+  var fnt_org = parseFloat($('#dest_text').css("fontSize"), 10);
+  console.log();
+  $('#dest_text').css("fontSize", fnt_org + dx);
+  //  textarea.style("font-size",)
+
+}
+
 function changeTheme() {
   "use strict";
   var i,

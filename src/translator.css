@@ -47,10 +47,10 @@ span {
     cursor: pointer;
 }
 div.day span.highlight {
-    background-color: lightblue;
+    background-color: rgb(173, 216, 230);
 }
 div.day span:hover {
-    background-color: cornflowerblue;
+    background-color: rgb(65, 197, 151);
 }
 div.night span.highlight,
 div.night span:hover {
